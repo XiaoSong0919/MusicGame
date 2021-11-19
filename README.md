@@ -3,7 +3,7 @@
 
 -----------------------------------------------------------------
 
-#Note类型
+##Note类型
 
 ·TAP（最基本）
 
@@ -13,25 +13,46 @@
 
 ·Break_hold（绝赞长条，尾判更加严格）
 
-#判定细节
+##判定
 
-BREAK 2600       +-10ms
+Perfect +- 30ms
+
+GREAT             +-70ms
+
+GOOD             +-120ms
+
+MISS              >120ms
+
+<details>
+  
+ <summary><b>&nbsp;&nbsp;&nbsp; 详细判定</b></summary>
+  
+BREAK 2600       +-10ms（大P）
 
 BREAK 2575       +-15ms
 
-BREAK 2550       +-20ms（大P）
+BREAK 2550       +-20ms
 
-BREAK 2525       +-30ms
+BREAK 2525       +-25ms
 
-BREAK 2500       +-40ms（小P）
+BREAK 2500       +-30ms（小P）
 
-GREAT            +-80ms
+GREAT 2000       +-40ms
+  
+  GREAT 1750     +-50ms
+  
+  GREAT 1500     +-60ms
 
-GOOD             +-160ms
+GOOD 1250        +-70ms
+  
+  GOOD 1000        +-120ms
 
-BAD              +200ms>x>+160ms
+MISS              >120ms
 
-MISS              <-160ms
+    
+<br/>
+  
+</details>
 
 #各类Note分数
 
