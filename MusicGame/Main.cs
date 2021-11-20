@@ -31,6 +31,8 @@ namespace MusicGame
             Graphics graphics = this.CreateGraphics();
             dpiX = (double)graphics.DpiX;
             zoom = Math.Abs(dpiX / 96);
+            //Game_UI f1 = new Game_UI(null, zoom, null, 0, 0);
+            //f1.Show();
             //MessageBox.Show(zoom.ToString());
             if (!Directory.Exists(Game_Path))//判断游戏文件夹是否存在
             {

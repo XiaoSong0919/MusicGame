@@ -18,6 +18,10 @@ namespace MusicGame
     public partial class Game_UI : Form
     {
         Main main = new Main();
+        int key1_x = 70;
+        int key2_x = 150;
+        int key3_x = 230;
+        int key4_x = 310;
         //创建note实例
         int k1_combo = 0;
         int k2_combo = 0;
@@ -157,8 +161,8 @@ namespace MusicGame
             {
                 if(line.IndexOf("{", StringComparison.OrdinalIgnoreCase) >= 0)
                 {
-                    string[] str_tmp = line.Split('}');
-                    per_part = (per_beat * 4) / Convert.ToDouble(str_tmp[0]);
+                    string[] str_tmp = line.Split('{');
+                    per_part = (per_beat * 4) / Convert.ToDouble(str_tmp[1].Replace("}",""));
                     if(str_tmp[1] != null)
                     {
                         Total_time = Total_time + n * per_part;
@@ -186,11 +190,15 @@ namespace MusicGame
         private void Game_UI_Load(object sender, EventArgs e)
         {
             MessageBox.Show(MusicName);
+            pictureBox2.SendToBack();
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Parent = pictureBox2;
+            pictureBox1.BringToFront();
             Point p2 = new Point(Convert.ToInt32(632 * zoom), Convert.ToInt32(377 * zoom));
             //Graphics graphics = this.CreateGraphics();
             //double dpiX = (double)graphics.DpiX;
             //zoom = Math.Abs(dpiX / 96);
-            down_time = (((518 * zoom - (8 * zoom)) / (2 * set_speed * zoom)) * 10);//计算提前出现note时机(单位:ms)
+            //down_time = (((518 * zoom - (8 * zoom)) / (2 * set_speed * zoom)) * 10);//计算提前出现note时机(单位:ms)
             MessageBox.Show(down_time.ToString());
             //button1.FlatAppearance.BorderSize = button2.FlatAppearance.BorderSize = button3.FlatAppearance.BorderSize = button4.FlatAppearance.BorderSize = button5.FlatAppearance.BorderSize = Convert.ToInt32(2 * zoom);
             try
@@ -260,7 +268,7 @@ namespace MusicGame
                             if (note_type == "hold" || note_type == "break_hold")
                             {
                                 is_holding = false;
-                                hold
+                                //hold
                             }
                         }
                     }
@@ -346,7 +354,7 @@ namespace MusicGame
                 }
                 Point p = new Point(x, y);
                 b1.Location = p;
-                y += Convert.ToInt32((2 * set_speed * zoom));
+                //y += Convert.ToInt32((2 * set_speed * zoom));
                 Thread.Sleep(10);
             }
         }//NOTE动画
