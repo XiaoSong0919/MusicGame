@@ -27,27 +27,8 @@ MISS              >120ms
   
  <summary><b>&nbsp;&nbsp;&nbsp; 详细判定</b></summary>
   
-BREAK 2600       +-10ms（大P）
-
-BREAK 2575       +-15ms
-
-BREAK 2550       +-20ms
-
-BREAK 2525       +-25ms
-
-BREAK 2500       +-30ms（小P）
-
-GREAT 2000       +-40ms
-  
-  GREAT 1750     +-50ms
-  
-  GREAT 1500     +-60ms
-
-GOOD 1250        +-70ms
-  
-  GOOD 1000        +-120ms
-
-MISS              >120ms
+|    Note   |    判定      |
+| :-------: | :-------------: | :-----: |
 
     
 <br/>
