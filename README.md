@@ -7,11 +7,11 @@
 
 ·TAP（最基本）
 
-·Hold（长条，有尾判）
+·Hold（长条）
 
 ·Break（具有奖分性质，判定比TAP更加严格）
 
-·Break_hold（绝赞长条，尾判更加严格）
+·Break_hold（绝赞长条，头部为Break，判定比Hold略为严格）
 
 ## 判定
 
